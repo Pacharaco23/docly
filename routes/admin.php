@@ -6,7 +6,9 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\DoctorController;
 use App\Http\Controllers\Admin\PatientController;
 use App\Http\Controllers\Admin\RoleController;
+use App\Http\Controllers\Admin\SupportController;
 use App\Http\Controllers\Admin\UserController;
+
 use App\Models\Schedule;
 use Illuminate\Support\Facades\Route;
 
@@ -39,4 +41,9 @@ Route::resource('appointments',AppointmentController::class);
 //Calendario
 Route::get('calendar', [CalendarController::class, 'index'])
     ->name('calendar.index');
-    
+
+
+Route::get('support', [SupportController::class, 'index'])
+    ->name('support.index');
+//Soporte
+//Route::get('support',SupportIndex::class)->name('admin.support.index');

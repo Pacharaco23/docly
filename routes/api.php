@@ -35,7 +35,7 @@ Route::get('/patients', function (Request $request) {
         });
 })->name('api.patients.index');
 
-Route::get('/appointments', function (Request $request) {
+/* Route::get('/appointments', function (Request $request) {
 
     $appointments = Appointment::with(['patient.user', 'doctor.user'])
         ->whereBetween('date', [$request->start, $request->end])
@@ -60,3 +60,5 @@ Route::get('/appointments', function (Request $request) {
         ];
     })->values();
 })->name('api.appointments.index');
+ */
+

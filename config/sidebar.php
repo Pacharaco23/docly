@@ -63,4 +63,12 @@ return [
         'active' => 'admin.calendar.*',
         'can' => ['read_calendar']
     ],
+     [
+        'type' => 'link',
+        'title' => 'Soporte',
+        'icon' => 'fa-solid fa-headset',
+        'route' => 'admin.support.index',
+        'active' => 'admin.support.*',
+        'can' => ['support_chat']
+    ] 
 ];

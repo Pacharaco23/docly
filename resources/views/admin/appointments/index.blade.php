@@ -16,6 +16,5 @@
         </x-slot>
     @endcan
 
-
     @livewire('admin.datatables.appointment-table')
 </x-admin-layout>

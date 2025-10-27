@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use App\Enums\AppointmentEnum;
-use App\Models\Scopes\IsDoctor;
 use App\Models\Scopes\VerifyRole;
 use Carbon\Carbon;
 use Illuminate\Database\Eloquent\Attributes\ScopedBy;

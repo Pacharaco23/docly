@@ -37,8 +37,8 @@ class PermissionSeeder extends Seeder
             'update_appointment',
             'delete_appointment',
 
-            'read_calendar'
-
+            'read_calendar',
+            'support_chat',
 
         ];
 

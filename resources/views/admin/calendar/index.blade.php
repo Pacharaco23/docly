@@ -14,16 +14,10 @@
                 cursor: pointer;
             }
         </style>
-
     @endpush
     <div x-data="data()">
 
-        <x-wire-modal-card 
-            title="Cita Médica" 
-            name="appointmentModal"
-            width="md"
-            align="center"
-            >
+        <x-wire-modal-card title="Cita Médica" name="appointmentModal" width="md" align="center">
             <div class="space-y-4 mb-4">
                 <div>
                     <strong>Fecha y Hora:</strong>
@@ -68,8 +62,7 @@
                         color: null,
                         url: null,
                     },
-                    openModal(info)
-                    {
+                    openModal(info) {
                         this.selectedEvent = {
                             dateTime: info.event.extendedProps.dateTime,
                             patient: info.event.extendedProps.patient,
@@ -107,10 +100,14 @@
                             slotDuration: '00:15:00',
                             slotMinTime: "{{ config('schedule.start_time') }}",
                             slotMaxTime: "{{ config('schedule.end_time') }}",
-
-
                             events: {
                                 url: "{{ route('api.appointments.index') }}",
+                                extraParams: {
+                                    _token: "{{ csrf_token() }}"
+                                },
+                                xhrFields: {
+                                    withCredentials: true
+                                },
                                 failure: function() {
                                     alert('Hubo un error al cargar los eventos.');
                                 }
