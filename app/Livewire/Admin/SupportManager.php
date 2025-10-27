@@ -21,7 +21,7 @@ class SupportManager extends Component
         $this->validate();
 
         // Enviar correo a desarrolladores
-       Mail::to('pachpiece@gmail.com') // Cambia al correo real
+       Mail::to('soportedocly@gmail.com') // Cambia al correo real
             ->send(new SupportMessageMail($this->subject, $this->message, auth()->user()));
 
 

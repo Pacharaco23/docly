@@ -70,5 +70,5 @@ return [
         'route' => 'admin.support.index',
         'active' => 'admin.support.*',
         'can' => ['support_chat']
-    ] 
+    ]
 ];
