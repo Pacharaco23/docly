@@ -102,9 +102,9 @@
                             slotMaxTime: "{{ config('schedule.end_time') }}",
                             events: {
                                 url: "/api/appointments",//{{ route('api.appointments.index') }}
-                                extraParams: {
-                                    _token: "{{ csrf_token() }}"
-                                },
+                                // extraParams: {
+                                //     _token: "{{ csrf_token() }}"
+                                // },
                                 xhrFields: {
                                     withCredentials: true
                                 },
