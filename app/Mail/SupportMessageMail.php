@@ -43,6 +43,11 @@ class SupportMessageMail extends Mailable
         );
     }
 
+    public function build()
+    {
+        return $this->replyTo($this->user->email, $this->user->name);
+    }
+
     /**
      * Get the attachments for the message.
      */
