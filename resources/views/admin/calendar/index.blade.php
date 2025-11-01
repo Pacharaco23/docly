@@ -101,7 +101,7 @@
                             slotMinTime: "{{ config('schedule.start_time') }}",
                             slotMaxTime: "{{ config('schedule.end_time') }}",
                             events: {
-                                url: "{{ route('api.appointments.index') }}",
+                                url: "/api/appointments",//{{ route('api.appointments.index') }}
                                 extraParams: {
                                     _token: "{{ csrf_token() }}"
                                 },
